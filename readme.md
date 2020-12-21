@@ -2,4 +2,6 @@ first commit
 second commit
 third commit
 
-rebase b
+rebase 2
+
+rebase c
