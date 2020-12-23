@@ -7,3 +7,5 @@ rebase 2
 rebase c
 
 modify
+
+test merge conflict
