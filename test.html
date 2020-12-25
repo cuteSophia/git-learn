@@ -14,10 +14,19 @@
 
     let code = "";
 
-    document.addEventListener("keyup", function (e) {
-      // console.log(e.key);
-      code += e.key;
-      input1.value = code.replace(/[^\d]/g, "");
-    });
+    document.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup(e) {
+      const { key } = e;
+      if (key === "Enter") {
+        console.log("发送条码：", code);
+        code = "";
+      } else {
+        code += e.key;
+      }
+      code = code.replace(/[^\d]/g, "");
+      input1.value = code;
+      console.log(code);
+    }
   </script>
 </html>
